@@ -1,0 +1,205 @@
+body{
+  justify-content: center;
+  align-items: center;
+  margin:0px; /*Moves margin to edge of screen*/
+}
+
+
+aside { /*Check what this does...*/
+  display: inline-block;
+}
+
+/* Header */
+#top_right_header {
+  color: rgb(0, 0, 0);
+  text-align: right;
+  width: 100%;
+  box-sizing: border-box;
+}
+#top_left_header {
+  width: 300;
+  height: 125;
+  bottom: 100px; 
+}
+
+  #nav_bar{
+    float: center;
+    text-align: center;
+    width: 100%;
+    padding: 5px 5px;
+    box-sizing: border-box;
+    background-color: rgb(0, 0, 0);
+  }
+#error_bar{
+    float: center;
+    text-align: center;
+    width: 100%;
+    padding: 5px 5px;
+    box-sizing: border-box;
+    background-color: red;
+	color: white;
+  }
+
+  .nav_button{
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(255, 118, 6);  
+    color: rgb(255, 255, 255);
+    padding: 10px 40px;
+  }
+
+  .submit_button{
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(255, 118, 6);  
+    color: rgb(255, 255, 255);
+    padding: 10px 40px;
+  }
+/* Home Page */
+#register_section {
+    color: black;
+    text-align: center;
+    height: auto;
+    background-color: rgba(255, 153, 153, 0.95);
+    border: 2px solid;
+    position: relative;
+
+  }
+
+  #home_section {
+    color: white;
+    text-align: center;
+    background-color: rgba(65, 65, 65, 0.25);
+    height: auto;
+    position: relative;
+    font-size: 150%;
+
+  }
+  #home_section.h1 {
+    font-size: 80px;
+  }
+
+  #password_checks {
+    color: black;
+    text-align: center;
+    height: auto;
+    background-color: rgb(177, 172, 172);
+    border: 2px solid;
+    position: relative;
+  }
+  #register_columns{
+    width: 98%;/* Stops it touching edge of window. */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /*250px = min width  1fr - take up avaliable space */
+    grid-column-gap: 500px;
+    background-color:rgb(255, 255, 255); 
+    float: center;
+  }
+
+  #home_column{
+    width: 55%;/* Stops it touching edge of window. */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-left: 25%;
+    float: center;
+    text-align: center;
+  }
+ #register_background{
+   height: 100%;
+   width: 100%;
+  background: url(register_background.png); 
+  background-position: center;
+  position: absolute;
+  background-size: cover;
+ }
+
+
+/* Events Page */
+#image{
+  max-height: 250px;
+  max-width: 600px;
+}
+
+#columns{
+    width: 98%;/* Stops it touching edge of window. */
+	margin: 2%;/* Stops events from touching edge of the buttons */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    grid-gap: 50px;
+    display: left;
+    background-color:rgb(131, 0, 143); 
+    float: center;
+  }
+
+#other_section {
+  color: black;
+  text-align: center;
+  height: auto;
+  background-color: rgb(189, 189, 189);
+  border: 2px solid;
+  position: relative;
+  }
+  #sport_section {
+    color: black;
+    text-align: center;
+    height: auto;
+    background-color: rgb(131, 243, 146);
+    border: 2px solid;
+    position: relative;
+  }
+
+  #culture_section {
+    color: black;
+    text-align: center;
+    height: auto;
+    background-color: rgb(255, 153, 153);
+    border: 2px solid;
+    position: relative;
+  }
+/* Info Page*/
+#table{
+    padding: 100px;
+	color: white;
+  }
+  #info_image {
+    position: absolute;
+    right: 0%;
+    width: 25%;
+    text-align: right;
+    box-sizing: border-box;
+    }
+#custom_events{
+    display: flex;
+    float: center;
+    text-align: center;
+    width: 100%;
+    padding: 5px 5px;
+    box-sizing: border-box;
+    background-color: rgb(131, 0, 143);
+  	color: white;
+  }
+#info_columns{
+	color: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    grid-gap: 50px;
+    display: left;
+    background-color:rgb(131, 0, 143); 
+    float: center;
+  }
+
+.custom_search_btn{
+    background-color: rgb(131, 0, 143);
+    border: 2px solid rgb(255, 255, 255); 
+    width: 165px;
+    height:50px;
+    margin-bottom: 2px;
+    color: white;
+    padding: 10px 50px;
+    display:inline-block;
+  }
+
+
+ 
+
+
+
+  
