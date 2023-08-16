@@ -77,7 +77,7 @@ include 'layout/header.php';
 				$like = "Like!";
 				$book = "Book!";
 				try {
-					$check_user = $db->prepare("SELECT * FROM studentInterest WHERE userID = '$userID' AND eventID = '$eventID'");
+					$check_user = $db->prepare("SELECT * FROM userInterest WHERE userID = '$userID' AND eventID = '$eventID'");
 					$check_user->execute();
 
 					$row = $check_user->fetch();
@@ -96,7 +96,7 @@ include 'layout/header.php';
 						}
 					}
 				} catch (PDOException $ex) {
-					echo "Something...";
+					echo $ex;
 				}
 
 				//booked event

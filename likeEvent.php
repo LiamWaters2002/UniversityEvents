@@ -6,8 +6,8 @@ $eventID = $_POST["eventID"];
 
 $userID = $_POST['userID'];//$row['userID']
 
-//Get liked from the studentInterest table.
-$query = $db->prepare("SELECT * FROM studentInterest WHERE userID = :userID AND eventID = :eventID");
+//Get liked from the userInterest table.
+$query = $db->prepare("SELECT * FROM userInterest WHERE userID = :userID AND eventID = :eventID");
 $query->bindParam(":userID", $userID);
 $query->bindParam(":eventID", $eventID);
 $query->execute();
@@ -20,10 +20,10 @@ try {
         	$boolLike = 0;
         	echo "Like!";
         	if($row['booked'] == 0){ //If liked and booked are false
-        		$remRow = $db->prepare("DELETE FROM studentInterest WHERE userID = :userID AND eventID = :eventID");
+        		$remRow = $db->prepare("DELETE FROM userInterest WHERE userID = :userID AND eventID = :eventID");
             	$remRow->bindParam(":userID", $userID);
 				$remRow->bindParam(":eventID", $eventID);
-				$remRow->execute(); //Delete the row for studentInterest as liked and booked are both false.
+				$remRow->execute(); //Delete the row for userInterest as liked and booked are both false.
             }
         	
 		} else if ($row['liked'] == 0) {
@@ -32,13 +32,13 @@ try {
 		}
 
     	//Update the value of liked to true or false.
-		$query = $db->prepare("UPDATE studentInterest SET liked = :boolLike WHERE userID = :userID AND eventID = :eventID ");
+		$query = $db->prepare("UPDATE userInterest SET liked = :boolLike WHERE userID = :userID AND eventID = :eventID ");
 		$query->bindParam(":boolLike", $boolLike);
 		$query->bindParam(":userID", $userID);
 		$query->bindParam(":eventID", $eventID);
 		$query->execute();
 	} else {
-		$like = $db->prepare("INSERT INTO studentInterest values(?, ?, ?, ?)");
+		$like = $db->prepare("INSERT INTO userInterest values(?, ?, ?, ?)");
 		$like->execute(array($userID, $eventID, 0, 1));
 		echo "Liked!";
 	}

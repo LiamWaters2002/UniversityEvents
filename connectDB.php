@@ -1,9 +1,9 @@
 <?php
 $host_db = 'localhost';
-$name_db = 'u_200109921_db';
+$name_db = 'id20845463_events';
 
-$userlogin = 'u-200109921';
-$userpass = 'wnp6H9HD4FmYQTR';
+$userlogin = 'id20845463_users';
+$userpass = 'Password123!';
 
 try {
 	//Establish a connection with the mySQL database using PHP data object
